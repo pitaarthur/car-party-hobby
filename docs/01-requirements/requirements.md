@@ -213,7 +213,10 @@ For the MVP:
 
 - one route traversal causes at most one toggle of that junction,
 - merely selecting/previewing a route does not trigger it,
-- an invalid/blocked move does not trigger it.
+- an invalid/blocked move does not trigger it,
+- a vehicle's final destination or staging/waiting slot **cannot be located on a Reactive Junction**; vehicles may only traverse Reactive Junctions.
+
+สำหรับ MVP จุดหมายปลายทางหรือ waiting/staging slot ต้องไม่อยู่บน Reactive Junction รถสามารถวิ่งผ่าน Reactive Junction ได้เท่านั้น
 
 ---
 
@@ -238,7 +241,7 @@ Passengers form an ordered queue visible to the player.
 For each boarding resolution:
 
 1. inspect the front passenger,
-2. if a waiting/arriving vehicle of the matching color/type is eligible, board that passenger,
+2. if a vehicle **currently occupying a waiting slot** of the matching color/type is eligible, board that passenger,
 3. repeat while the next front passenger can board deterministically,
 4. stop when the front passenger has no eligible vehicle.
 
@@ -256,7 +259,10 @@ If multiple waiting vehicles are equally eligible for the same front passenger, 
 - Boarding resolves immediately after arrival.
 - A vehicle remains in that slot until its fixed capacity is reached.
 - When full, it departs automatically and frees the slot.
+- For the MVP, **departure means the vehicle is immediately removed/despawned from the active gameplay state without requiring an exit route**; the waiting slot becomes free immediately.
 - Slot ordering remains stable; remaining vehicles do not need to compact/reorder in the MVP.
+
+สำหรับ MVP คำว่า departure หมายถึงรถถูกนำออกจาก active gameplay state ทันทีโดยไม่ต้องคำนวณเส้นทางออก และ waiting slot ว่างทันที
 
 **Reasoning:** slot state is visible, stable, and easy to predict.
 
@@ -392,6 +398,7 @@ The Phase 1 specification must support one level satisfying all of the following
 20. The complete experience works offline.
 21. No hidden RNG is required.
 22. A typical successful playthrough can fit the intended 2–5 minute session target.
+23. If multiple waiting vehicles match the front passenger, the vehicle in the **lowest-index waiting slot** deterministically receives the passenger.
 
 ---
 
@@ -449,15 +456,24 @@ These belong to Phase 2–4 or later.
 ## 11. Independent review / ผลการ Review
 
 **Reviewer:** Gemini: Chat  
-**Result:** ✅ PASS  
+**Result:** ✅ **PASS WITH MINOR FIXES**  
 **Reported by:** Product Owner
 
-No blocking defect was reported. The requirements are accepted for handoff to Phase 2 — Domain & Data.
+### Review findings and resolution
 
-ไม่มี blocking defect จาก Independent Review และ requirement ชุดนี้ได้รับการยอมรับให้ส่งต่อไป Phase 2 — Domain & Data
+| Finding | Severity | Resolution |
+|---|---|---|
+| Vehicle could ambiguously stop on a Reactive Junction | Major | ✅ GR-04 now forbids destinations/staging slots on Reactive Junctions |
+| "Departure" behavior was undefined | Major | ✅ GR-07 now defines departure as immediate despawn/removal with no exit-route calculation |
+| Boarding eligibility could include non-slot vehicles | Minor | ✅ GR-06 now restricts boarding to vehicles currently occupying waiting slots |
+| Boarding tie-breaker lacked explicit acceptance coverage | Minor | ✅ AC-23 added for lowest-index waiting-slot priority |
+
+All reviewer findings have been incorporated. No Critical findings remain, and the requirements are now accepted for handoff to Phase 2 — Domain & Data.
+
+ข้อเสนอแนะจาก Independent Review ถูกแก้ครบทั้ง 4 จุดแล้ว ไม่มี Critical finding คงค้าง และ requirement พร้อมส่งต่อไป Phase 2 — Domain & Data
 
 ---
 
-**Gate 1 status:** ✅ **APPROVED**
+**Gate 1 status:** ✅ **APPROVED — REVIEW FINDINGS RESOLVED**
 
 **Next after approval:** Phase 2 — Domain & Data.
