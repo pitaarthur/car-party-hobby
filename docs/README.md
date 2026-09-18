@@ -1,0 +1,35 @@
+# Project Documentation / เอกสารโครงการ
+
+This repository follows the project's Standard Project Development Framework with phase gates and explicit agent routing.
+
+Repository documents are the source of truth. Chat discussions can inform decisions, but approved decisions should be recorded here before downstream implementation.
+
+รีโปนี้ใช้ Standard Project Development Framework แบบมี Phase Gate และกำหนด Agent ที่รับผิดชอบอย่างชัดเจน โดยเอกสารใน repository เป็น source of truth หลัก การสนทนาใน Chat ใช้ประกอบการตัดสินใจได้ แต่ข้อสรุปที่อนุมัติแล้วต้องถูกบันทึกใน repo ก่อนส่งต่อไปยัง Phase ถัดไป
+
+## Current project state / สถานะโครงการ
+
+| Item | Status |
+|---|---|
+| Current phase | **Phase 0 — Discovery** |
+| Current gate | **Gate 0 — Pending** |
+| Product Owner | **Human / Repository owner** |
+| Coding | **Blocked for gameplay implementation** |
+| Primary Phase 0 agent | **ChatGPT: Work — Business/System Analyst** |
+| Orchestrator / discussion | **ChatGPT: Chat** |
+
+## Documents
+
+### Discovery
+- [Project Brief](00-discovery/project-brief.md)
+
+### Framework
+- [Project Development Phases](framework/project-development-phases.md)
+- [Agent Routing Matrix](framework/agent-routing-matrix.md)
+
+## Working principle / หลักการทำงาน
+
+**Input → Analysis → Artifact → Review → Gate → Next Phase**
+
+A specialist agent owns phase work, the orchestrator controls workflow, an independent reviewer checks where required, and the Product Owner owns final decisions.
+
+**Specialist Agent รับผิดชอบงานตามขอบเขต, Orchestrator ควบคุม workflow, Reviewer ตรวจแบบอิสระเมื่อจำเป็น และ Product Owner เป็นผู้ตัดสินใจสุดท้าย**
