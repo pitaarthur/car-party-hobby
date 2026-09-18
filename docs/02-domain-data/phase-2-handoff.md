@@ -158,3 +158,33 @@ Recommended review focus:
 - waiting-slot derivation,
 - restart reproducibility,
 - whether the Level Schema is sufficient for the vertical slice without leaking rendering concerns.
+
+
+---
+
+## 8. Independent Review / ผลการ Review
+
+**Reviewer:** Gemini: Chat  
+**Result:** ✅ **PASS WITH MINOR FIXES / SAFE TO HAND OFF**  
+**Reported by:** Product Owner
+
+Reviewer conclusion:
+
+> The domain model is safe to hand off to Phase 3 Architecture. The static-schema / mutable-state separation and passenger queue partitioning provide a stable, deterministic foundation.
+
+The reviewer noted only minor implementation-level details and no structural domain flaws. Those details are non-blocking for Gate 2 and may be resolved during Phase 3 Architecture / Phase 5 Implementation Planning as appropriate.
+
+### Gate 2 final result
+
+| Item | Status |
+|---|---|
+| Structural domain correctness | ✅ Pass |
+| Phase 1 requirement coverage | ✅ Pass |
+| Static/runtime separation | ✅ Pass |
+| Determinism | ✅ Pass |
+| Safe for Architecture handoff | ✅ Yes |
+| Blocking findings | ✅ None |
+
+**Gate 2 status:** ✅ **APPROVED**
+
+**Next phase:** Phase 3 — System Architecture.
