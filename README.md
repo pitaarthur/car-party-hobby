@@ -6,9 +6,9 @@ A hobby mobile puzzle game project inspired by traffic/bus-party puzzle mechanic
 
 ## Current status / สถานะปัจจุบัน
 
-- **Phase:** 2 — Domain & Data
+- **Phase:** 3 — System Architecture
 - **Gate:** Gate 1 open
-- **Previous gate:** Gate 1 approved
+- **Previous gate:** Gate 2 approved
 - **Implementation:** Blocked until the applicable planning/architecture gates are approved
 - **Target platform:** Android only
 - **App stack constraint:** React Native + TypeScript

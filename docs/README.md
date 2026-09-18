@@ -10,12 +10,12 @@ Repository documents are the source of truth. Chat discussions can inform decisi
 
 | Item | Status |
 |---|---|
-| Current phase | **Phase 2 — Domain & Data** |
+| Current phase | **Phase 3 — System Architecture** |
 | Current gate | **Gate 1 — Candidate for Product Owner Approval** |
-| Previous gate | **Gate 1 — Approved** |
+| Previous gate | **Gate 2 — Approved** |
 | Product Owner | **Human / Repository owner** |
 | Coding | **Blocked for gameplay implementation** |
-| Primary Phase 2 agent | **ChatGPT: Work — System Architect** |
+| Primary Phase 3 agent | **ChatGPT: Work — System Architect** |
 | Supporting / review | **ChatGPT: Chat + Gemini: Chat** |
 
 ## Documents
@@ -33,6 +33,15 @@ Repository documents are the source of truth. Chat discussions can inform decisi
 - [Level Schema](02-domain-data/level-schema.md)
 - [State Transitions](02-domain-data/state-transitions.md)
 - [Domain Invariants](02-domain-data/domain-invariants.md)
+
+### Architecture
+- [Phase 3 Handoff / Gate 3 Status](03-architecture/phase-3-handoff.md)
+- [System Architecture](03-architecture/architecture.md)
+- [Architecture Decisions](03-architecture/architecture-decisions.md)
+- [Module Boundaries](03-architecture/module-boundaries.md)
+- [Runtime Flow](03-architecture/runtime-flow.md)
+- [Testing Architecture](03-architecture/testing-architecture.md)
+- [Architecture Risks](03-architecture/architecture-risks.md)
 
 ### Framework
 - [Project Development Phases](framework/project-development-phases.md)
