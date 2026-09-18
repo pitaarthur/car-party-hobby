@@ -1,7 +1,7 @@
 # Phase 2 — Domain & Data Handoff
 
 **Project:** Car Party Hobby  
-**Status:** In progress — Gate 2 open  
+**Status:** Gate 2 candidate for review  
 **Primary Role:** System Architect  
 **Specific Primary Agent:** ChatGPT: Work  
 **Supporting Agents:** ChatGPT: Chat + Gemini: Chat  
@@ -126,4 +126,35 @@ Gate 2 may be considered for approval when:
 - Domain invariants are explicit and testable.
 - No unnecessary backend/database ERD is introduced for the offline MVP.
 
-**Gate 2 status:** OPEN
+## 6. Phase 2 artifacts completed
+
+- [Domain Model](domain-model.md)
+- [Game State Model](game-state-model.md)
+- [Level Schema](level-schema.md)
+- [State Transition Specification](state-transitions.md)
+- [Domain Invariants](domain-invariants.md)
+
+## 7. Gate 2 readiness assessment
+
+| Exit criterion | Status |
+|---|---|
+| Every Phase 1 rule represented unambiguously | ✅ Pass |
+| Static LevelDefinition separated from mutable GameState | ✅ Pass |
+| Reactive Junction state transitions represented without UI assumptions | ✅ Pass |
+| Waiting-slot and passenger-queue behavior deterministic | ✅ Pass |
+| Win/deadlock derived from GameState | ✅ Pass |
+| Restart reconstructs exact initial state | ✅ Pass |
+| Level schema can encode vertical slice | ✅ Pass |
+| Domain invariants explicit and testable | ✅ Pass |
+| No unnecessary backend/database ERD introduced | ✅ Pass |
+
+**Gate 2 status:** **CANDIDATE FOR REVIEW / PRODUCT OWNER APPROVAL**
+
+Recommended review focus:
+
+- route graph determinism and unique-or-none constraint,
+- static/runtime ownership boundaries,
+- passenger partition invariants,
+- waiting-slot derivation,
+- restart reproducibility,
+- whether the Level Schema is sufficient for the vertical slice without leaking rendering concerns.
