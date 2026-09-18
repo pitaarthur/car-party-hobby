@@ -1,7 +1,7 @@
 # Phase 0 — Project Brief
 
 **Project:** Car Party Hobby  
-**Status:** Gate 0 candidate for approval  
+**Status:** ✅ Gate 0 Approved  
 **Primary Agent:** ChatGPT: Work — Business/System Analyst  
 **Supporting Agent:** ChatGPT: Chat — Orchestrator / discussion  
 **Product Owner:** Human
@@ -223,42 +223,28 @@ Explicitly out of scope for V1:
 
 ## 9. Design principles / หลักการออกแบบ
 
-1. **Deterministic rules first** — gameplay state must be explainable and testable.
-2. **Game engine separated from presentation where practical** — UI must not become the source of gameplay truth.
-3. **Data-driven levels** — levels should eventually be representable as structured data.
-4. **Fast iteration** — prioritize a playable prototype before polish.
-5. **Original identity** — inspiration is acceptable; direct cloning is not the product goal.
-6. **Mobile-first interaction** — tap targets, feedback, and readability must suit Android phones.
-7. **Short-session clarity** — decisions should be readable enough for casual players within a 2–5 minute session.
-8. **Full-information fairness** — important consequences should be previewable before a committed move.
-9. **Every move may reshape the puzzle** — Reactive Lanes should make sequence planning meaningful.
-
-ภาษาไทย:
-
-1. กติกาต้อง deterministic และ test ได้
-2. แยก game logic ออกจาก presentation เท่าที่เหมาะสม
-3. Level ควรขับเคลื่อนด้วย structured data
-4. ทำ playable prototype ให้เร็ว ก่อน visual polish
-5. เกมต้องมี identity ของเราเอง
-6. Interaction ต้องออกแบบสำหรับมือถือ Android เป็นหลัก
-7. การตัดสินใจในเกมต้องอ่านสถานการณ์ได้ง่ายพอสำหรับผู้เล่น Casual ในรอบ 2–5 นาที
-8. ผลสำคัญของ move ต้อง preview ได้ก่อน commit
-9. แต่ละ move สามารถเปลี่ยน puzzle state ผ่าน Reactive Lanes ได้
+1. **Deterministic rules first**
+2. **Game engine separated from presentation where practical**
+3. **Data-driven levels**
+4. **Fast iteration**
+5. **Original identity**
+6. **Mobile-first interaction**
+7. **Short-session clarity**
+8. **Full-information fairness**
+9. **Every move may reshape the puzzle**
 
 ## 10. Gate 0 decision register / บันทึกการตัดสินใจ Gate 0
 
-| Decision | Status | Product Owner / delegated decision |
+| Decision | Status | Product Owner decision |
 |---|---|---|
 | Target player | ✅ Confirmed | Casual players of all ages |
 | Intended session length | ✅ Confirmed | 2–5 minutes |
 | Movement model | ✅ Confirmed | Lane/path-based |
 | MVP boundary | ✅ Confirmed | Offline/local-first; no backend/login/ads/IAP/leaderboard/multiplayer in V1 |
-| Unique gameplay hook / differentiation | ✅ Proposed under delegated design choice | **Reactive Lanes — successful moves can change future lane/junction states** |
-| Visible information before a move | ✅ Proposed under delegated design choice | **Full-information model + route/blocker/junction-change preview on selection** |
+| Unique gameplay hook / differentiation | ✅ Confirmed | **Reactive Lanes** |
+| Visible information before a move | ✅ Confirmed | **Full-information model + route/blocker/junction-change preview** |
 
 ## 11. Deferred to Phase 1 / เลื่อนไปกำหนดใน Phase 1
-
-The following details are intentionally deferred to Requirements:
 
 - Exact path/blocking rules
 - Exact reactive-junction trigger rules
@@ -269,7 +255,7 @@ The following details are intentionally deferred to Requirements:
 - Passenger boarding order
 - Level schema details
 
-## 12. Gate 0 exit criteria / เกณฑ์ผ่าน Gate 0
+## 12. Gate 0 result / ผล Gate 0
 
 | Criterion | Status |
 |---|---|
@@ -280,6 +266,6 @@ The following details are intentionally deferred to Requirements:
 | Major discovery questions are answered or deliberately deferred | ✅ Pass |
 | No implementation architecture has been prematurely locked beyond user-provided constraints | ✅ Pass |
 
-**Gate 0 status:** **CANDIDATE FOR PRODUCT OWNER APPROVAL**
+**Gate 0 status:** ✅ **APPROVED**
 
-**Next after approval:** Phase 1 — Requirements.
+**Next phase:** Phase 1 — Requirements.
