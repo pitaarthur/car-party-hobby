@@ -10,17 +10,21 @@ Repository documents are the source of truth. Chat discussions can inform decisi
 
 | Item | Status |
 |---|---|
-| Current phase | **Phase 0 — Discovery** |
-| Current gate | **Gate 0 — Pending** |
+| Current phase | **Phase 1 — Requirements** |
+| Current gate | **Gate 1 — Candidate for Product Owner Approval** |
+| Previous gate | **Gate 0 — Approved** |
 | Product Owner | **Human / Repository owner** |
 | Coding | **Blocked for gameplay implementation** |
-| Primary Phase 0 agent | **ChatGPT: Work — Business/System Analyst** |
-| Orchestrator / discussion | **ChatGPT: Chat** |
+| Primary Phase 1 agent | **ChatGPT: Work — Business/System Analyst** |
+| Supporting / review | **ChatGPT: Chat + Gemini: Chat** |
 
 ## Documents
 
 ### Discovery
-- [Project Brief](00-discovery/project-brief.md)
+- [Project Brief — Gate 0 Approved](00-discovery/project-brief.md)
+
+### Requirements
+- [Phase 1 Requirements — Gate 1 Candidate](01-requirements/requirements.md)
 
 ### Framework
 - [Project Development Phases](framework/project-development-phases.md)

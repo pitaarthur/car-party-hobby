@@ -6,11 +6,13 @@ A hobby mobile puzzle game project inspired by traffic/bus-party puzzle mechanic
 
 ## Current status / สถานะปัจจุบัน
 
-- **Phase:** 0 — Discovery
-- **Gate:** Gate 0 pending
+- **Phase:** 1 — Requirements
+- **Gate:** Gate 1 open
+- **Previous gate:** Gate 0 approved
 - **Implementation:** Blocked until the applicable planning/architecture gates are approved
 - **Target platform:** Android only
 - **App stack constraint:** React Native + TypeScript
 - **Prototype runtime:** Expo Go is acceptable
+- **Signature mechanic:** Reactive Lanes
 
 Project documentation lives in [docs/](docs/README.md).
